@@ -5,6 +5,6 @@ As duas APIs comunicam-se de forma assíncrona utilizando RabbitMQ. A implantaç
 Como banco de dados, este projeto utiliza MySQL no RDS na AWS.
 
 ## Pré-requisitos
-.NET 8
-Docker e Docker Compose
-kubectl e Minikube (ou similar) para Kubernetes local
+.NET 8    
+Docker e Docker Compose  
+kubectl e Minikube (ou similar) para Kubernetes local  
