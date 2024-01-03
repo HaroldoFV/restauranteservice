@@ -1,7 +1,7 @@
 # Projeto de APIs em .NET 8 com RabbitMQ e Kubernetes
 Este projeto consiste em duas APIs desenvolvidas utilizando .NET 8. 
 Um serviço é focado no cadastro de restaurantes e o outro é chamado de ItemService, responsável por gerenciar itens de forma simples.
-As duas APIs comunicam-se de forma assíncrona utilizando RabbitMQ. A implantação do projeto é feita utilizando Kubernetes, criando pods para cada um dos serviços.
+As duas APIs comunicam-se de forma assíncrona utilizando RabbitMQ. A implantação do projeto é feita utilizando Kubernetes na AWS, criando pods para cada um dos serviços.
 Como banco de dados, este projeto utiliza MySQL.
 
 ## Pré-requisitos
