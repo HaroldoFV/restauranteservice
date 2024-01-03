@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: item-deployment
+  labels: 
+    app: item-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: item-api
+  template:
+    metadata:
+      labels:
+        app: item-api
+    spec:
+      containers:
+        - name: item-api
+          image: url_image_itemservice:1.3
+          ports: 
+            - containerPort: 80
+          env:
+            - name: RabbitMqHost
+              value: "rabbitmq-service"
+            - name: RabbitMqPort
+              value: "5672"

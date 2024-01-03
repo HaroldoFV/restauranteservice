@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: restaurante-deployment
+  labels: 
+    app: restaurante-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: restaurante-api
+  template:
+    metadata:
+      labels:
+        app: restaurante-api
+    spec:
+      containers:
+        - name: restaurante-api
+          image: url_image_restauranteservice:1.5
+          ports: 
+            - containerPort: 80
+          env:
+            - name: ConnectionStrings__RestauranteConnection
+              value: "server=localhost;database=yourdb;user=admin;password=supersenha"
+            - name: RabbitMqHost
+              value: "rabbitmq-service"
+            - name: RabbitMqPort
+              value: "5672"
